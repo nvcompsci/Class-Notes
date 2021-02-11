@@ -32,10 +32,12 @@ fetch("/login”,config)
 ```
 ## Server-Side Development
 ### Setup express server
+(Terminal Commands)
 ``` bash
 #uses Node Package Manager to install express framework
-npm install express ```
-
+npm install express
+```
+(/server.js)
 ``` js
 //Import express framework
 const express = require("express")
