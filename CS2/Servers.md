@@ -30,3 +30,30 @@ fetch("/login”,config)
     .then( ratings => console.log(ratings) )
     .catch(err => console.error(err))
 ```
+## Server-Side Development
+### Setup express server
+``` bash
+#uses Node Package Manager to install express framework
+npm install express ```
+
+``` js
+//Import express framework
+const express = require("express")
+//Initialize server object
+const app = express()
+
+//Parse request data coming in
+app.use(express.json())
+//Serve ‘public’ folder as static website
+app.use( express.static('public') )
+
+//basic GET request handler
+app.get("/hello", (req, res) => {
+    res.send("Hello, world!")
+})
+
+//Listens for web requests
+app.listen(80, () => console.log("Server started") )
+
+```
+
